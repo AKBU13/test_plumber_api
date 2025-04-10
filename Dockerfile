@@ -4,7 +4,7 @@ FROM rocker/r-ver:4.3.1
 # 2. Installer le package 'plumber' via R
 RUN R -e "install.packages('plumber')"
 
-# 3. Copier tous les fichiers du projet dans le conteneur (au répertoire /app)
+# 3. Copier tous les fichiers du projet dans le conteneur (au répertoire /app) ok
 COPY . /app
 
 # 4. Définir le répertoire de travail du conteneur (dans /app)
