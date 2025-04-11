@@ -10,5 +10,8 @@ COPY . /app
 # 4. Définir le répertoire de travail du conteneur (dans /app)
 WORKDIR /app
 
+# 5. Exposer le port.
+EXPOSE 8000
+
 # 5. Exécuter la commande pour lancer l'API Plumber
 CMD ["R", "-e", "pr <- plumber::plumb('Plumber_Api_Test.R'); pr$run(host='0.0.0.0', port=8000)"]
